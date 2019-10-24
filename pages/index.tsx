@@ -1,7 +1,18 @@
+import withLayout from '../components/Layout';
+import Link from 'next/link';
+
+const PostLink = (props: any) => (
+    <li>
+      <Link href={'/[id]'} as={`/${props.id}`}>
+        <a>{props.id}</a>
+      </Link>
+    </li>
+  );
+
 const Index = () => (
-    <div>
-        <p>Hello Next.js</p>
-    </div>
+    <ul>
+        <PostLink id="dynamic-link" />
+    </ul>
 );
 
-export default Index;
+export default withLayout(Index);
