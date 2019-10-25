@@ -5,11 +5,9 @@
   "main": "index.tsx",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "build:styles && next build",
     "build:styles": "postcss src/css/tailwind.css -o public/build/tailwind.css",
-    "start": "next start",
-    "prebuild": "npm run build:styles",
-    "prestart": "npm run build:stylesd",
+    "start": "build:styles && next start",
     "prettier": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
     "eslint-fix": "eslint --fix \"**/*.+(js|jsx|ts|tsx)\""
   },
