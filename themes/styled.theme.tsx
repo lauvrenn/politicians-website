@@ -1,4 +1,3 @@
-
 export const colors = {
   black: '#000',
   blue: '#83ceeb',
@@ -6,7 +5,7 @@ export const colors = {
   silver: '#c0c0c0',
   softblue: '#e2edf7',
   white: '#fff',
-}
+};
 
 const space = [
   0,
@@ -30,14 +29,13 @@ const space = [
   90,
   95,
   100,
-]
+];
 
-const fontSizes = [10, 12, 14, 18, 22, 30, 38, 42, 46, 50, 58, 66, 74]
-const breakpoints = ['32em', '48em', '64em']
-const maxContainerWidth = 1280
-const regular = 400
-const bold = 600
-
+const fontSizes = [10, 12, 14, 18, 22, 30, 38, 42, 46, 50, 58, 66, 74];
+const breakpoints = ['32em', '48em', '64em'];
+const maxContainerWidth = 1280;
+const regular = 400;
+const bold = 600;
 
 export default {
   colors,
@@ -47,4 +45,4 @@ export default {
   maxContainerWidth,
   regular,
   bold,
-}
+};
