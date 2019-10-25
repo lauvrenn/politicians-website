@@ -12,4 +12,5 @@ const Search = () => {
   );
 };
 
+
 export default withLayout(Search);
