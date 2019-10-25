@@ -2,11 +2,15 @@
   "name": "politicians",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
     "dev": "next",
-    "build": "next build && postcss css/tailwind.css -o public/build/tailwind.css",
-    "start": "next start"
+    "build": "next build",
+    "build:styles": "postcss src/css/tailwind.css -o public/build/tailwind.css",
+    "start": "next start",
+    "prebuild": "npm run build:styles",
+    "prestart": "npm run build:stylesd",
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\""
   },
   "repository": {
     "type": "git",
@@ -30,6 +34,10 @@
   "devDependencies": {
     "@types/node": "^12.11.7",
     "@types/react": "^16.9.10",
-    "typescript": "^3.6.4"
+    "prettier": "1.18.2",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   }
 }
