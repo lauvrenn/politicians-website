@@ -1,7 +1,6 @@
 import React from 'react';
 import withLayout from '../common/Layout';
 import Link from 'next/link';
-import Button from '../../src/common/components/Button';
 
 const PostLink = (props: any) => (
   <li>

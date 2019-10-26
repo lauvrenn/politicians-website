@@ -1,3 +1,4 @@
+const Dotenv = require('dotenv-webpack')
 module.exports = {
     entry: ['babel-polyfill', './pages/index.tsx'],
     output: {
@@ -11,5 +12,8 @@ module.exports = {
             exclude: /node_modules/,
             use: ['babel-loader', 'eslint-loader']
         }]
-    }
+    },
+    plugins: [
+        new Dotenv()
+    ]
 };
