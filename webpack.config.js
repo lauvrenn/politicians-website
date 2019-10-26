@@ -2,15 +2,12 @@ module.exports = {
     entry: './pages/index.tsx',
     output: {
         path: `${__dirname}/dist`,
-        publicPath: '/',
+        publicPath: `${__dirname}/pages`,
         filename: 'bundle.js'
-    },
-    devServer: {
-        contentBase: './dist'
     },
     module: {
         rules: [{
-            test: /\.(tsx)$/,
+            test: /\.(ts|tsx)$/,
             exclude: /node_modules/,
             use: ['babel-loader', 'eslint-loader']
         }]
