@@ -1,7 +1,7 @@
 import React from 'react';
 import withLayout from '../common/Layout';
 import Link from 'next/link';
-import Button from '../../components/Button';
+import Button from '../../src/common/components/Button';
 
 const PostLink = (props: any) => (
   <li>
@@ -15,7 +15,6 @@ class Main extends React.Component {
   render() {
     return (
       <div className="flex flex-col w-3/4 mx-auto my-12 items-center">
-        <Button>I am a button</Button>
         <PostLink id={'Link'} />
         <input
           className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
