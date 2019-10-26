@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './pages/index.tsx',
+    entry: ['babel-polyfill', './pages/index.tsx'],
     output: {
         path: `${__dirname}/dist`,
         publicPath: `${__dirname}/pages`,
