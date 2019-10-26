@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import withLayout from '../components/Layout';
+import withLayout from './common/Layout';
 
 const Search = () => {
     const router = useRouter();
