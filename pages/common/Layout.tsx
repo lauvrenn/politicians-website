@@ -18,8 +18,11 @@ const withLayout = (Page: any) => {
   };
 
   LayoutWithProps.getInitialProps = async function(ctx: any) {
-    const componentProps =
-      Page.getInitialProps && (await Page.getInitialProps(ctx));
+    let componentProps = {};
+
+    if (Page.getInitialProps) {
+      componentProps = await Page.getInitialProps(ctx);
+    }
 
     return {
       ...componentProps,
