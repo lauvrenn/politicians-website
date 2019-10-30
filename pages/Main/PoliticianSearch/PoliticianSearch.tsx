@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import useGlobalHook, {
   initialState,
 } from '../../../src/stores/State/politician.store';
+import fetch from 'isomorphic-unfetch';
 
 const PoliticianSearch = (props: any) => {
   const [politicianState, politicianActions] = useGlobalHook();
@@ -14,6 +15,7 @@ const PoliticianSearch = (props: any) => {
         type="text"
         placeholder="Hi there!"
       />
+
       <a
         onClick={() =>
           politicianActions.setPolitician({
@@ -25,8 +27,10 @@ const PoliticianSearch = (props: any) => {
       >
         Link
       </a>
-      {console.log('state', politicianState)}
-      <SearchLink id={1} />
+
+      {console.log('politiciansearch', props)}
+      {console.log('politiciansearch, state', politicianState)}
+      {/* <SearchLink id={1} /> */}
     </>
   );
 };
@@ -35,13 +39,13 @@ const SearchLink = (props: any) => {
   return (
     <Link href={'/[id]'} as={`/${props.id}`}>
       <a
-      // onClick={() =>
-      //   props.global.setPolician({
-      //     id: 1,
-      //     first_name: 'first',
-      //     last_name: 'last',
-      //   })
-      // }
+        onClick={() =>
+          props.global.setPolician({
+            id: 1,
+            first_name: 'first',
+            last_name: 'last',
+          })
+        }
       >
         {props.id}
       </a>

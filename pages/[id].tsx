@@ -7,14 +7,14 @@ import PoliticianView from './PoliticianView/PoliticianView';
 // import API_KEY from '../.env';
 
 const Search = (props: IPoliticians) => {
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <>
       {/* {console.log('KEY', process.env.API_KEY)} */}
-      {console.log('props', props)}
+      {/* {console.log('props', props)}
       <h1>{router.query.id}</h1>
-      <PoliticianView politicianID={props.id} />
+      <PoliticianView politicianID={props.id} /> */}
     </>
   );
 };

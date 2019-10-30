@@ -16,18 +16,16 @@ const withLayout = (Page: any) => {
       </div>
     );
   };
-
-  LayoutWithProps.getInitialProps = async function(ctx: any) {
-    let componentProps = {};
-
-    if (Page.getInitialProps) {
+  if (Page.getInitialProps) {
+    LayoutWithProps.getInitialProps = async function(ctx: any) {
+      let componentProps = {};
       componentProps = await Page.getInitialProps(ctx);
-    }
 
-    return {
-      ...componentProps,
+      return {
+        ...componentProps,
+      };
     };
-  };
+  }
 
   return LayoutWithProps;
 };
