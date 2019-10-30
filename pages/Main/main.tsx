@@ -6,6 +6,7 @@ import PoliticianSearch from './PoliticianSearch/PoliticianSearch';
 const Main = (props: any) => {
   return (
     <div className="flex flex-col w-3/4 mx-auto my-12 items-center">
+      <p>Main</p>
       <PoliticianSearch {...props} />
     </div>
   );

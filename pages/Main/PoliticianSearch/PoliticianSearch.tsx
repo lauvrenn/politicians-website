@@ -1,52 +1,35 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
-import useGlobalHook, {
-  initialState,
-} from '../../../src/stores/State/politician.store';
+import React from 'react';
+import useGlobalHook from '../../../src/stores/State/politician.store';
 import fetch from 'isomorphic-unfetch';
+import SearchField from '../../../src/common/components/SearchField';
 
 const PoliticianSearch = (props: any) => {
   const [politicianState, politicianActions] = useGlobalHook();
 
   return (
     <>
-      <input
-        className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-        type="text"
-        placeholder="Hi there!"
-      />
-
-      <a
-        onClick={() =>
-          politicianActions.setPolitician({
-            id: 1,
-            first_name: 'first',
-            last_name: 'last',
-          })
-        }
-      >
-        Link
-      </a>
-
+      <SearchField placeholder={'Find a politician...'} />
       {console.log('politiciansearch', props)}
       {console.log('politiciansearch, state', politicianState)}
-      {/* <SearchLink id={1} /> */}
+      <SearchLink id={1} politicianActions={politicianActions} />
     </>
   );
 };
 
 const SearchLink = (props: any) => {
   return (
-    <Link href={'/[id]'} as={`/${props.id}`}>
+    <Link href={'/politician/[id]'} as={`/politician/${props.id}`}>
       <a
         onClick={() =>
-          props.global.setPolician({
+          props.politicianActions.setPolitician({
             id: 1,
             first_name: 'first',
             last_name: 'last',
           })
         }
       >
+        {console.log('id', props.id)}
         {props.id}
       </a>
     </Link>
