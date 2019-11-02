@@ -13,8 +13,10 @@ const PoliticianView = () => {
   return (
     <>
       {console.log('state', politicianData)}
-      <PoliticianProfile />
-      <PoliticianDashboard />
+      <Flex>
+        <PoliticianProfile />
+        <PoliticianDashboard />
+      </Flex>
     </>
   );
 };

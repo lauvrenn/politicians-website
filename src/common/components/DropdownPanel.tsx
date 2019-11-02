@@ -3,7 +3,27 @@ import styled from 'styled-components/macro';
 import tw from 'tailwind.macro';
 
 const DropdownContainer = styled.div`
-  ${tw`bg-black flex text-blue-300`}
+  ${tw`
+  py-2
+  mt-2
+  w-48 
+  bg-white 
+  rounded-lg 
+  text-blue-300 
+  shadow-md
+  `}
+`;
+
+const DropdownItem = styled.a`
+  ${tw`
+  block 
+  px-4 
+  py-2 
+  text-gray-800 
+  hover:bg-indigo-400 
+  hover:text-white 
+  hover:text-bold
+  `}
 `;
 
 const DropdownPanel = ({ children }: any, { ...buttonProps }: any) => {
@@ -17,9 +37,9 @@ const DropdownPanel = ({ children }: any, { ...buttonProps }: any) => {
     </button> */}
 
       <DropdownContainer>
-        <a href="#">Account</a>
-        <a href="#">Account</a>
-        <a href="#">Account</a>
+        <DropdownItem>Account</DropdownItem>
+        <DropdownItem>Account</DropdownItem>
+        <DropdownItem>Account</DropdownItem>
       </DropdownContainer>
     </>
   );

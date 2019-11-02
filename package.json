@@ -53,6 +53,7 @@
     "eslint-loader": "^3.0.2",
     "eslint-plugin-react": "^7.16.0",
     "prettier": "1.18.2",
+    "stylelint-config-recommended": "^3.0.0",
     "tailwind.macro": "^1.0.0-alpha.10",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2",

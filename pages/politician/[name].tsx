@@ -8,6 +8,7 @@ import useGlobalHook from '../../src/stores/State/politician.store';
 import useGlobalDataHook from '../../src/stores/State/politicianData.store';
 import { IPolitician } from '../../src/common/models/politician.models';
 import CountryView from './CountryView/CountryView';
+import PoliticianRoll from './PoliticianRoll/PoliticiaRoll';
 
 const SearchResult = (props: any) => {
   const router = useRouter();
@@ -25,6 +26,7 @@ const SearchResult = (props: any) => {
       <p>SearchResult</p>
       <h1>{router.query.id}</h1>
       <CountryView />
+      <PoliticianRoll />
       <PoliticianView />
     </>
   );
@@ -32,7 +34,7 @@ const SearchResult = (props: any) => {
 
 SearchResult.getInitialProps = async function({ query }: any) {
   const res = await fetch(
-    `https://my.api.mockaroo.com/politicians/${query.id}.json?key=${process.env.API_KEY}`
+    `https://my.api.mockaroo.com/politicians/${query.id}.json?key=`
   );
   const data = await res.json();
 

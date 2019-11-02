@@ -1,16 +1,10 @@
 import React from 'react';
 import Header from './Header';
 
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD',
-};
-
 const withLayout = (Page: any) => {
   const LayoutWithProps = (props: any) => {
     return (
-      <div style={layoutStyle}>
+      <div>
         <Header />
         <Page {...props} />
       </div>
