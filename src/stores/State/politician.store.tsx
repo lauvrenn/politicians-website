@@ -1,8 +1,15 @@
 import React from 'react';
 import useGlobalHook from '../globalHook.store';
 
-import * as actions from '../../actions/actions';
 import { IPoliticians } from '../../common/models/politicians.models';
+
+const setPolitician = (store: any, politician: IPoliticians) => {
+  store.setState(politician);
+};
+
+const actions = {
+  setPolitician,
+};
 
 export const initialState = {} as IPoliticians;
 
