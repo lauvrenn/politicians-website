@@ -5,21 +5,40 @@ import tw from 'tailwind.macro';
 
 const FooterStl = styled.div`
   ${tw`
+    p-8
     w-full
     items-center
-    bg-teal-400
     content-center
-    p-10
-    rounded-tl-lg
-    rounded-tr-lg
+    text-black
+    font-bold
+ `};
+`;
+
+const FooterContainer = styled.div`
+  ${tw`
+    px-20
+    w-full
+    border-livegreen
+    border-8
+    rounded-twoxl
+ `};
+`;
+
+const FooterItems = styled.div`
+  ${tw`
+    my-20
  `};
 `;
 
 const Footer = () => (
   <FooterStl>
-    <Link href="/">
-      <a className={'font-bold text-white '}>Home</a>
-    </Link>
+    <FooterContainer>
+      <FooterItems>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </FooterItems>
+    </FooterContainer>
   </FooterStl>
 );
 

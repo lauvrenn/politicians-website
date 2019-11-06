@@ -5,15 +5,30 @@ import tw from 'tailwind.macro';
 
 const HeaderStl = styled.div`
   ${tw`
-    bg-creme
+    border-black
+    border-b-2
+    p-4
+    flex
+ `};
+`;
+
+const HeaderItem = styled.div`
+  ${tw`
+    ml-10
+    border-r-4
+    border-livegreen
+    py-2
+    px-5
  `};
 `;
 
 const Header = () => (
   <HeaderStl>
-    <Link href="/">
-      <a>Home</a>
-    </Link>
+    <HeaderItem>
+      <Link href="/">
+        <a>Home</a>
+      </Link>
+    </HeaderItem>
   </HeaderStl>
 );
 

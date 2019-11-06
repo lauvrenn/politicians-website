@@ -4,10 +4,18 @@ module.exports = {
     theme: {
         ...defaultTheme,
         extend: {
-            backgroundColor: theme => ({
-                ...theme('colors'),
-                creme: '#F4DBC9'
-            })
+            colors: {
+                creme: '#F4DBC9',
+                navy: '#1a3952',
+                lightGreen: '#e3f17f',
+                livegreen: '#d8fe54',
+                liveBlue: '#0ddef2'
+            },
+            borderRadius: {
+                xl: '10px',
+                twoxl: '20px',
+                threexl: '30px'
+            }
         }
     },
     variants: {},

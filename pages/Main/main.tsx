@@ -14,4 +14,4 @@ const Main = (props: any) => {
 
 Main.getInitialProps = PoliticianSearch.getInitialProps;
 
-export default Main;
+export default withLayout(Main);
