@@ -1,16 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
+import styled from 'styled-components/macro';
+import tw from 'tailwind.macro';
 
-const linkStyle = {
-    marginRight: 15
-};
+const HeaderStl = styled.div`
+  ${tw`
+    bg-creme
+ `};
+`;
 
 const Header = () => (
-    <div>
-        <Link href="/">
-            <a style={linkStyle}>Home</a>
-        </Link>
-    </div>
+  <HeaderStl>
+    <Link href="/">
+      <a>Home</a>
+    </Link>
+  </HeaderStl>
 );
 
 export default Header;

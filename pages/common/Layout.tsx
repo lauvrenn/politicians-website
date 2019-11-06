@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Footer from './Footer';
 
 const withLayout = (Page: any) => {
   const LayoutWithProps = (props: any) => {
@@ -7,6 +8,7 @@ const withLayout = (Page: any) => {
       <div>
         <Header />
         <Page {...props} />
+        <Footer />
       </div>
     );
   };
