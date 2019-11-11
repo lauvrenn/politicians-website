@@ -1,14 +1,23 @@
 import React from 'react';
+import styled from 'styled-components/macro';
+import tw from 'tailwind.macro';
+
+const ButtonStyle = styled.button`
+  ${tw`
+  px-5 
+  py-1 
+  rounded-lg 
+  bg-liveGreen
+  text-white
+  text-md
+  font-light
+  border-white
+  border-2
+ `};
+`;
 
 const Button = ({ children }: any, { ...buttonProps }: any) => {
-  return (
-    <button
-      className="px-2 py-1 rounded-lg bg-green-400 text-green-800 text-xl font-light uppercase shadow-md hover:shadow-lg"
-      {...buttonProps}
-    >
-      {children}
-    </button>
-  );
-}
+  return <ButtonStyle {...buttonProps}>{children}</ButtonStyle>;
+};
 
-export default Button
+export default Button;

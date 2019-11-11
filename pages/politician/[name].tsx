@@ -34,7 +34,7 @@ const SearchResult = (props: any) => {
 
 SearchResult.getInitialProps = async function({ query }: any) {
   const res = await fetch(
-    `https://my.api.mockaroo.com/politicians/${query.id}.json?key=914004a0`
+    `https://my.api.mockaroo.com/politicians/${query.id}.json?key=$`
   );
   const data = await res.json();
 

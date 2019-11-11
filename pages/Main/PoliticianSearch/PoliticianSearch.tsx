@@ -5,6 +5,16 @@ import useGlobalDataHook from '../../../src/stores/State/politicianData.store';
 import fetch from 'isomorphic-unfetch';
 import SearchField from '../../../src/common/components/SearchField';
 import { useRouter } from 'next/router';
+import styled from 'styled-components/macro';
+import tw from 'tailwind.macro';
+import Button from '../../../src/common/components/Button';
+
+const SearchPanel = styled.div`
+  ${tw`
+  p-1
+  rounded-xl
+ `};
+`;
 
 const PoliticianSearch = (props: any) => {
   const router = useRouter();
@@ -13,10 +23,12 @@ const PoliticianSearch = (props: any) => {
 
   return (
     <>
-      <SearchField placeholder={'Find a politician...'} />
+      <SearchPanel>
+        <SearchField placeholder={'Find a politician...'} />
+      </SearchPanel>
       {console.log('politiciansearch', props)}
       {console.log('politiciansearch, state', politicianState)}
-      <a
+      <Button
         onClick={() =>
           politicianActions.setPolitician({
             id: 1,
@@ -26,7 +38,7 @@ const PoliticianSearch = (props: any) => {
         }
       >
         Set
-      </a>
+      </Button>
       <SearchLink politician={politicianState} />
     </>
   );
@@ -42,17 +54,17 @@ const SearchLink = (props: any) => {
       }}
       as={`/politician/${props.politician.last_name}-${props.politician.first_name}`}
     >
-      <a>
+      <Button>
         {console.log('id', props.politician.id)}
         Search
-      </a>
+      </Button>
     </Link>
   );
 };
 
 PoliticianSearch.getInitialProps = async function() {
   const res = await fetch(
-    `https://my.api.mockaroo.com/politicians.json?key=914004a0`
+    `https://my.api.mockaroo.com/politicians.json?key=$`
   );
   const data = await res.json();
 

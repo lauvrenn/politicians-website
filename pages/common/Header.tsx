@@ -16,7 +16,7 @@ const HeaderItem = styled.div`
   ${tw`
     ml-10
     border-r-4
-    border-livegreen
+    border-liveGreen
     py-2
     px-5
  `};

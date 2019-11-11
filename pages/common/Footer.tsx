@@ -5,12 +5,17 @@ import tw from 'tailwind.macro';
 
 const FooterStl = styled.div`
   ${tw`
+    absolute
+    bottom-0
+    left-0
+    right-0
     p-8
     w-full
     items-center
     content-center
     text-black
     font-bold
+    bg-navy
  `};
 `;
 
@@ -18,8 +23,6 @@ const FooterContainer = styled.div`
   ${tw`
     px-20
     w-full
-    border-livegreen
-    border-8
     rounded-twoxl
  `};
 `;
